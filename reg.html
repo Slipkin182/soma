@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMA</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div style="width:2.5rem"></div><!-- espacio para el lado izquierdo -->
+            <div class="header-text">
+                <h1>SOMA - UVAE</h1>
+                <p>Solución Modular de Aprendizaje - Unidad Vocacional de Aprendizaje en Empresa UVAE.</p>
+            </div>
+            <img src="imagenes/logopys.png" alt="Logo SOMA" class="logo-soma">
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="rdt.html">Consultar Requerimientos de Trabajo</a>
+        <a href="edc.html">Emisión de Certificado</a>
+        <a href="reg.html">Registro</a>
+    </nav>
+        <main>
+            <div class="registro-container">
+                <h2>Registro</h2>
+                <form class="registro-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cedula">Cédula</label>
+                        <input type="text" id="cedula" name="cedula" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="celular">Número de celular</label>
+                        <input type="text" id="celular" name="celular" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Curso</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Selecciona el curso</option>
+                            <option value="trabajo_asistido">Trabajo Asistido</option>
+                            <option value="reentrenamiento">Reentrenamiento</option>
+                            <option value="rescate_industrial">Rescate Industrial</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-check">
+                        <label style="font-weight:normal;">
+                            <input type="checkbox" name="acepta" required>
+                            Autorizo el <a href="politica_privacidad.html" target="_blank">tratamiento de mis datos personales</a> conforme a la política de privacidad.
+                        </label>
+                    </div>
+                    <button type="submit" class="boton-registro">Registrarse</button>
+                </form>
+            </div>
+        </main>
+
+</body>
+</html>

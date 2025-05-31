@@ -1,0 +1,225 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f6fa;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #24345b;
+    color: #fff;
+    padding: 0.0rem 0 0rem 0;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.header-text {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    pointer-events: none; /* para evitar solapamiento de clicks */
+}
+.header-text h1 {
+    margin: 0 0 0.3rem 0;
+    font-size:5rem;
+    letter-spacing: 2px;
+}
+.header-text p {
+    margin: 0;
+    font-size: 1.0rem;
+    color: #bfc9df;
+}
+.logo-soma {
+    height: 12.5rem;
+    width: auto;
+    display: block;
+    margin-left: auto;
+}
+@media (max-width: 900px) {
+    .header-content {
+        max-width: 98vw;
+    }
+}
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-end;
+        min-height: 80px;
+    }
+    .header-text {
+        position: static;
+        transform: none;
+        width: 100%;
+        pointer-events: auto;
+        margin-bottom: 1rem;
+    }
+    .logo-soma {
+        height: 2rem;
+        margin: 0 0 0 auto;
+    }
+}
+
+
+
+nav {
+    background: #35477d;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(36,52,91,0.07);
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #ffcc29;
+}
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(36,52,91,0.08);
+    min-height: 300px;
+}
+
+.boton {
+    color: #fff; 
+    background: #103b62;
+    border-radius: 10px;
+    padding: 0.6rem 0;
+    width: 120px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.ofertas-title {
+    font-size: 1.7rem;
+    color: #24345b;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.ofertas-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.oferta-card {
+    background: #f3f6fb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(36,52,91,0.04);
+    flex: 1 1 260px;
+    max-width: 300px;
+    min-width: 220px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+.oferta-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(36,52,91,0.11);
+}
+.oferta-card h3 {
+    color: #35477d;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+.oferta-card p {
+    color: #444;
+    font-size: 1rem;
+}
+@media (max-width: 900px) {
+    .ofertas-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 600px) {
+    header h1 { font-size: 1.7rem; }
+    nav a { margin: 0 1rem; font-size: 1rem; }
+    main { padding: 1rem; }
+    .ofertas-grid { gap: 1rem; }
+}
+
+
+
+
+.registro-container {
+    max-width: 420px;
+    margin: 2rem auto;
+    padding: 2rem 2.5rem;
+    background: #f3f6fb;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(36,52,91,0.08);
+    text-align: center;
+}
+.registro-container h2 {
+    color: #24345b;
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+.registro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-group label {
+    font-weight: 600;
+    color: #35477d;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid #bfc9df;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    transition: border 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus {
+    border: 1.5px solid #24345b;
+}
+.boton-registro {
+    color: #fff;
+    background: #103b62;
+    border-radius: 10px;
+    border: none;
+    padding: 0.7rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+.boton-registro:hover {
+    background: #24345b;
+    color: #ffcc29;
+}
